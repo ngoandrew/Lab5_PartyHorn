@@ -1,5 +1,10 @@
 // main.js
 
+// Handle volume number input
+document.getElementById("volume-number").addEventListener("input", changeNum);
+function changeNum() {
+    document.getElementById("volume-number").value = e.target.value;
+}
 
 // Handle radio input
 document.getElementById("radio-air-horn").addEventListener("click", changeSrc);
