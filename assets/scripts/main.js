@@ -2,7 +2,7 @@
 
 // Handle volume number input
 document.getElementById("volume-number").addEventListener("input", changeNum);
-function changeNum() {
+function changeNum(e) {
     document.getElementById("volume-number").value = e.target.value;
 }
 
