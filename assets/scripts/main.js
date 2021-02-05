@@ -5,7 +5,7 @@
 document.getElementById("radio-air-horn").addEventListener("click", changeSrc);
 document.getElementById("radio-car-horn").addEventListener("click", changeSrc);
 document.getElementById("radio-party-horn").addEventListener("click", changeSrc);
-/*
+
 function changeSrc() {
     if (document.getElementById("radio-air-horn").checked) {
       document.getElementById("sound-image").src = "./assets/media/images/air-horn.svg";
@@ -17,7 +17,7 @@ function changeSrc() {
       document.getElementById("sound-image").src = "./assets/media/images/party-horn.svg";
       document.getElementById("horn-sound").src = "./assets/media/audio/party-horn.mp3";
     }
-} */
+} 
 
 // Handle honk button
 document.getElementById("honk-btn").addEventListener("click", honk);
