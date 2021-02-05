@@ -23,7 +23,6 @@ function changeSrc() {
 document.getElementById("honk-btn").addEventListener("click", honk);
 
 function honk() {
-    document.getElementById("horn-sound").volume = 0.5;
     if(document.getElementById("volume-number").value != 0) {    
         document.getElementById("horn-sound").play();
     }
