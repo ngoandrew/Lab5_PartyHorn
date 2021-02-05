@@ -28,7 +28,7 @@ function changeSrc() {
 document.getElementById("honk-btn").addEventListener("click", honk);
 
 function honk() {
-    if(document.getElementById("volume-number").value != 0) {    
+    //if(document.getElementById("volume-number").value != 0) {    
         document.getElementById("horn-sound").play();
-    }
+    //}
 }
