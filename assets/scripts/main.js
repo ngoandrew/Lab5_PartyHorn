@@ -2,8 +2,22 @@
 
 // Handle volume number input
 document.getElementById("volume-number").addEventListener("input", changeNum);
+
 function changeNum() {
-    document.getElementById("volume-slider").value = document.getElementById("volume-number").value;
+    let volume = document.getElementById("volume-number").value;
+    document.getElementById("volume-slider").value = volume;
+    
+    if(volume == 0) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
+    } else if (volume >= 1 && volume <= 33) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-1.svg";
+    } else if (volume >= 34 && volume <= 66) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
+    } else if (volume >= 67 && volume <= 100) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
+    }
+    
+    document.getElementById("horn-sound").volume = volume;
     
 }
 
