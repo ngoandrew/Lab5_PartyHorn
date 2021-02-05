@@ -21,6 +21,27 @@ function changeNum() {
     
 }
 
+// Handle volume slider input
+document.getElementById("volume-slider").addEventListener("input", changeSlider);
+
+function changeSlider() {
+    let volume = document.getElementById("volume-slider").value;
+    document.getElementById("volume-number").value = volume;
+    
+    if(volume == 0) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-0.svg";
+    } else if (volume >= 1 && volume <= 33) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-1.svg";
+    } else if (volume >= 34 && volume <= 66) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-2.svg";
+    } else if (volume >= 67 && volume <= 100) {
+        document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
+    }
+    
+    document.getElementById("horn-sound").volume = volume;
+    
+}
+
 // Handle radio input
 document.getElementById("radio-air-horn").addEventListener("click", changeSrc);
 document.getElementById("radio-car-horn").addEventListener("click", changeSrc);
