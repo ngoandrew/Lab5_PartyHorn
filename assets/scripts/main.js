@@ -17,7 +17,7 @@ function changeNum() {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
     }
     
-    document.getElementById("horn-sound").volume = (volume / 100);
+    document.getElementById("horn-sound").volume = (volume / parseFloat(100));
     
 }
 
@@ -38,7 +38,7 @@ function changeSlider() {
         document.getElementById("volume-image").src = "./assets/media/icons/volume-level-3.svg";
     }
     
-    document.getElementById("horn-sound").volume = (volume / 100);
+    document.getElementById("horn-sound").volume = (volume / parseFloat(100));
     
 }
 
