@@ -61,10 +61,11 @@ function changeSrc() {
 } 
 
 // Handle honk button
-document.getElementById("honk-btn").addEventListener("input", honk);
+document.getElementById("honk-btn").addEventListener("click", honk);
 
 function honk() {
-    if(document.getElementById("volume-number").value != 0) {    
+    document.getElementById("horn-sound").volume = document.getElementById("volume-number").value;
+    if(document.getElementById("horn-sound").volume != 0) {    
         document.getElementById("horn-sound").play();
         event.preventDefault();
     }
